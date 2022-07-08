@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<body>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            /* Center the loader */
+            #loader {
+                position: absolute;
+                left: 45.5%;
+                top: 40%;
+                z-index: 1;
+            }
+            #rotate {
+                animation: rotation 8s infinite linear;
+            }
+
+            @keyframes rotation {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(359deg);
+                }
+            }
+            /* Add animation to "page content" */
+            .animate-bottom {
+                position: relative;
+                -webkit-animation-name: animatebottom;
+                -webkit-animation-duration: 1s;
+                animation-name: animatebottom;
+                animation-duration: 1s;
+            }
+
+            @-webkit-keyframes animatebottom {
+                from {
+                    bottom: -100px;
+                    opacity: 0;
+                }
+                to {
+                    bottom: 0px;
+                    opacity: 1;
+                }
+            }
+
+            @keyframes animatebottom {
+                from {
+                    bottom: -100px;
+                    opacity: 0;
+                }
+                to {
+                    bottom: 0;
+                    opacity: 1;
+                }
+            }
+
+            #myDiv {
+                display: none;
+
+            }
+            .LoadRot {
+                animation: rotation 2s infinite EASE-IN-OUT;
+            }
+            @font-face {
+                font-family: FontMain;
+                src: url(Assets/mainpage/basefont.woff) format("woff");
+            }
+            #myDiv {
+                color: white;
+            }
+            .text-main {
+                font-family: FontMain;
+                position: static;
+                left: 45.5%;
+                top: 100%;
+
+                color: white;
+                display: flex;
+                justify-content: center;
+                font-size: 10px;
+            }
+            .image-main {
+                display: flex;
+                justify-content: center;
+            }
+            #bg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                filter: blur(5px);
+                -webkit-filter: blur(5px);
+
+                /* Preserve aspet ratio */
+                min-width: 100%;
+                min-height: 100%;
+            }
+        	.card {
+             position: relative;
+            margin-left: auto;
+            margin-right: auto;
+  box-shadow: 0 12px 12px 0 rgba(0,0,0,0.5);
+  transition: 0.3s;
+  width: 25%;
+  text-align: center;
+     font-family: FontMain;
+background: rgba(51, 170, 51, .7)
+  border-radius: 10px;
+
+
+}
+
+.card:hover {
+  box-shadow: 0 8px 28px 0 rgba(0,0,0,0.7);
+}
+
+.Avatar {
+  border-radius: 5px 5px 0 0;
+}
+
+.topnav {
+ box-shadow: 0 12px 12px 0 rgba(0,0,0,0.5);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.24)
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+              font-family: FontMain;
+  display: block;
+    transition: 0.3s;
+  color: #f2f2f2;
+  background: rgba(51, 170, 51, .7)
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background: rgba(51, 170, 51, .7)
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+          .gamer{
+          	float: right;
+          	padding-top: 8px
+          }
+        </style>
+        
+    </head>
+    <body onload="myFunction()" style="margin: 0;">
+        <div id="loader">
+            <img src="Assets/mainpage/loadingimage.png" width="100" height="100" class="LoadRot" />
+        </div>
+
+        <div style="display: none;" id="myDiv" class="animate-bottom">
+        	<div class="topnav" id="myTopnav">
+
+	  <a href="Mainpage.html" class="active">Home</a>
+  <a href="release.html">Release</a>
+
+       <img src="Assets/mainpage/animebrawladcrs.png" width="50" height="30" class="gamer" />
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+            <div class="image-main">
+                <img src="Assets/mainpage/animebrawladcrs.png" width="500" height="300" />
+            </div>
+            <div class="text-main">
+                <i>
+                    <h2>Welcome to the official Website of anime brawlers made by brawl Studios</h2>
+                </i>
+            </div>
+
+            <img src="Assets/mainpage/bg.png" width="500" height="300" id="bg" />
+            <br />
+            <br />
+            <br />
+            <br />
+           
+<div class="card">
+<a href="https://www.roblox.com/games/9886564653/ABO?gameSetTypeId=100000003&homePageSessionInfo=68a68aab-83d6-49b0-b35c-ac7f9f072287&numberOfLoadedTiles=6&page=homePage&placeId=9886564653&position=1&sortPos=0&universeId=3651426724">
+  <img src="Assets/mainpage/ICHIGO X LUFFY X RIN.png"class="Avatar" style="width:100%">
+</a>
+  <div class="container">
+    <h4><b>Anime Brawlers Online</b></h4> 
+    <p>"Anime Brawl is a roster of various kinds of anime characters, that you play and earn and save up to buy them, and advance further and further to collecting the whole roster, and climb yourself up the leaderboards!"</p> 
+    <br/>
+  </div>
+          
+
+        </div>
+
+        <script>
+            var myVar;
+
+            function myFunction() {
+                myVar = setTimeout(showPage, 1000);
+            }
+
+            function showPage() {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("myDiv").style.display = "block";
+            }
+        </script>
+    </body>
+</html>
